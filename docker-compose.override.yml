@@ -1,0 +1,6 @@
+version: '2'
+services:
+  app:
+    command: uwsgi --http :8000 --py-autoreload 1 -w app:__hug_wsgi__
+    volumes:
+      - .:/usr/src/app:ro
