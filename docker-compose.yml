@@ -1,0 +1,7 @@
+version: '2'
+services:
+  app:
+    build: .
+    command: uwsgi --http :8000 -w app:__hug_wsgi__
+    ports:
+      - 8000:8000
