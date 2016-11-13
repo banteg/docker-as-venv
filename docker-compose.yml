@@ -5,3 +5,5 @@ services:
     command: uwsgi --http :8000 -w app:__hug_wsgi__
     ports:
       - 8000:8000
+  redis:
+    image: redis
